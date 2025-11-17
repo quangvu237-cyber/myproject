@@ -1,0 +1,233 @@
+/* style.css */
+
+:root {
+    --primary-color: #00bcd4; /* Màu xanh ngọc */
+    --secondary-color: #ffffff;
+    --background-color: #f7f7f7;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    display: flex; /* Bố cục chính: sidebar và main content */
+    min-height: 100vh;
+}
+
+/* --- 1. Sidebar --- */
+.sidebar {
+    width: 450px; /* Độ rộng cố định */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Giữ thanh bên ở vị trí cố định */
+    top: 0;
+    
+}
+
+.profile-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    object-fit: cover;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- 2. Main Content --- */
+.main-content {
+    flex-grow: 1; /* Chiếm hết không gian còn lại */
+    padding: 30px;
+}
+
+.section {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding-top: 60px ;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Thanh Tiến Trình Kỹ Năng --- */
+.skill-bar {
+    margin-bottom: 25px;
+}
+
+.bar-bg {
+    background-color: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* ---Sở Thích --- */
+.services-grid, .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.service-item, .interest-item {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+/* style.css */
+
+/* --- Cấu trúc chung 2 cột --- */
+.contact-container {
+    display: flex;
+    gap: 40px; /* Khoảng cách giữa hai cột */
+}
+
+.contact-form-area, .contact-info-area {
+    flex-basis: 50%; /* Chia đều 50% cho mỗi cột */
+}
+
+/* --- Định kiểu Form --- */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-grow: 1;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều rộng */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group.full-width {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical; /* Chỉ cho phép kéo dãn chiều dọc */
+}
+
+/* Nút Gửi tin nhắn */
+.submit-button {
+    width: 100%;
+    padding: 15px 30px;
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 30px; /* Bo tròn góc */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Định kiểu Thông tin Liên hệ (Cột 2) --- */
+.contact-info-area h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info-area p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0f7fa; /* Màu nền icon nhạt */
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.info-item h4 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.info-item p {
+    margin: 0;
+    color: #555;
+} 
+#skills{
+    padding-top: 50px ;
+
+}
