@@ -231,3 +231,54 @@ textarea {
     padding-top: 50px ;
 
 }
+/* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 768px) {
+
+    /* Sidebar thu nhỏ và đẩy lên trên */
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .container {
+        flex-direction: column; /* Đưa sidebar lên, main-content xuống */
+    }
+
+    /* Liên hệ – đổi sang 1 cột */
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Form: các dòng Tên – Họ, Công ty – Website chuyển về 1 cột */
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Căn giữa lại phần info */
+    .contact-info-area {
+        margin-top: 20px;
+    }
+
+    /* Giảm padding để đỡ chật */
+    .section {
+        padding: 20px;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Tối ưu mobile nhỏ */
+    .info-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
